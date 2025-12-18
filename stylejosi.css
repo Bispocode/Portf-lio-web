@@ -1,5 +1,5 @@
 body {
-    background-image: url("../imagens/fundo-site-portfólio.png");
+    background-image: url("fundo-site-portfólio.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -293,3 +293,4 @@ span{
         width: 55%;
     }
 }
+
