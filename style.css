@@ -102,10 +102,9 @@ span{
     font-size: 30px;
     color: #d5f3ff;
 }
-
 /*SEÇÃO SOBRE*/
 .sobre{
- display: flex;
+    display: flex;
     align-items: center;
     gap: 40px;
 
@@ -163,7 +162,6 @@ span{
     font-style: normal;
     color: #ffffff;
 }
-
 .textosobre p {
     margin: 0;
     max-width: 2200px;
@@ -174,6 +172,47 @@ span{
     font-style: normal;
     font-size: 16px;
     color: #ffffff;
+}
+/*PROJETOS*/
+.projetos {
+    width: 100%;
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    color: white;
+    border: #0af;
+}
+.lista-projetos {
+    display: flex;
+    gap: 24px;
+
+    padding: 20px 40px;
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+}
+.card-projeto {
+    min-width: 240px;
+    height: 160px;
+
+    background: rgba(47, 48, 54, 0.12);
+    backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+    border: 1px solid #0af;
+}
+.card-projeto {
+    transition: transform 0.3s ease;
+}
+.card-projeto img{
+    height: 240px;
+}
+.card-projeto:hover {
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 /*RODAPÉ*/
@@ -186,7 +225,6 @@ span{
   border-radius: 12px 12px 0px 0px;   
   box-sizing: border-box; 
  }
-
 /*RESPONSIVIDADE*/
 @media (max-width: 1024px) {
 
@@ -236,13 +274,13 @@ span{
 
     /* NAVBAR EM COLUNA */
     .navbar {
-        flex-direction: column;
+        flex-direction: wrap;
         align-items: center;
         text-align: center;
     }
 
     .menu {
-        flex-direction: column;
+        flex-direction: wrap;
         gap: 10px;
     }
 
@@ -255,7 +293,12 @@ span{
     .logotipo {
         height: 120px;
     }
-
+    .logotipo:hover{
+        filter: invert(0.3) sepia(1) saturate(10) hue-rotate(130deg);
+        color: #39c2ff;
+        height: 140px;
+        transition: 0.3s ease-in-out;
+    }
     span {
         font-size: 18px;
         margin: 0;
@@ -271,8 +314,8 @@ span{
     }
 
     .eu {
-        height: 220px;
-        width: 100%;
+        height: auto;
+        width: 50%;
     }
 
     .textosobre h1 {
@@ -286,6 +329,12 @@ span{
     /* LINHA CENTRAL SOME NO MOBILE */
     .linha-centro {
         display: none;
+    }
+    .projetos h2 {
+        font-size: 32px;
+    }
+    .lista-projetos {
+        padding: 20px;
     }
 }
 @media (min-width: 1600px) {
