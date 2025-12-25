@@ -228,8 +228,6 @@ span{
 
     transition: transform 0.6s ease;
 }
-
-
 /* ===== CARD ===== */
 .card-projeto {
     flex: 0 0 calc((100% - 48px) / 3); /* 3 por vez */
@@ -239,20 +237,17 @@ span{
 
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-
 .card-projeto img {
     width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
     display: block;
 }
-
 /* ===== HOVER DO CARD ===== */
 .card-projeto:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 25px rgba(0, 170, 255, 0.35);
 }
-
 /* ===== CONTROLES ===== */
 .controles {
     position: absolute;
@@ -267,7 +262,6 @@ span{
     transform: translateY(-50%);
     pointer-events: none;
 }
-
 /* ===== BOTÕES ===== */
 .btn {
     margin: 20px;
@@ -289,7 +283,6 @@ span{
 
     transition: 0.3s ease;
 }
-
 .btn:hover {
     background: rgba(0, 170, 255, 0.2);
     box-shadow: 0 0 14px rgba(0, 170, 255, 0.7);
