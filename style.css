@@ -18,19 +18,30 @@ body {
   border: 1px solid #0af;
   border-radius: 0 0 12px 12px;   
   box-sizing: border-box; 
+
 }
 .navbar {
+    width: 100%;
+    box-sizing: border-box;
+
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 15px 30px;
-
-    background: #020b17; /* azul bem escuro */
-    border: 1px solid #0a2f4b; /* borda azulada */
-    border-radius: 0 0 12px 12px; /* cantos arredondados de baixo */
-
-    color: #e0f8ff;
+    background: #020b17;
+    border: 1px solid #0a2f4b;
+    border-radius: 0 0 12px 12px;
+    z-index: 2000;
+}
+.navbar h1{
+    margin-right: 0px;
+    font-family:  "carilliantine", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    color: #d5f3ff;
+    transition: 1s;
 }
 .menu {
     padding: 6px 12px;
@@ -58,48 +69,48 @@ body {
     border-color: #39c2ff;
     color: #ffffff;
 }
- .logo{
-  height: 30px;
-  filter: drop-shadow(0 0 2px #39c2ff);
-}
  @keyframes flutuar {
     0% { transform: translateY(0); }
-    50% { transform: translateY(-3px); }
+    50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
 }
+.navbar h1:hover{
+    transition: 1s;
+    font-size: 20px;
+}
 /*TELA PRINCIPAL*/
- .logo:hover {
-    animation: flutuar 3s ease-in-out infinite;
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 8px #39c2ff);
-    transition: 0.2s;
-}
- .logotipo{
-  height:  180px;
-  align-self: center;
-}
- .logotipo:hover{
-    filter: invert(0.3) sepia(1) saturate(10) hue-rotate(130deg);
-    color: #39c2ff;
-    height: 160px;
-    transition: 0.3s ease-in-out;
-}
 .logo-container {
     display: flex;
     justify-content: center; /* centraliza horizontal */
     align-items: center;     /* centraliza vertical */
     width: 100%;
-    height: 300px; /* ou 100vh se quiser ocupar a tela */
+    height: 500px; /* ou 100vh se quiser ocupar a tela */
     flex-direction: column;
 }
-span{
-    justify-content: right;
-    margin: -10px;
-    margin-right: 0px;
-    font-family: "komet", sans-serif;
-    font-weight: 300;
+.logo-container h1{
+    margin: 0 0 20px;
+    font-size: 180px;
+    letter-spacing: 2px;
+    font-family: "carilliantine", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    color: #ffffff;
+    transition: 1s;
+    justify-content: center;
+}
+.logo-container h1:hover{
+    animation: flutuar 3s ease-in-out infinite;
+    font-size: 140px;
+    color: rgb(71, 194, 255);
+    transition: 1s;
+}
+span{
+    justify-content: center;
+    margin: -30px;
+    margin-right: 0px;
+    font-family:  "carilliantine", sans-serif;
+    font-style: normal;
+    font-size: 35px;
     color: #d5f3ff;
 }
 /*SEÇÃO SOBRE*/
@@ -108,11 +119,11 @@ span{
     align-items: center;
     gap: 40px;
 
-    width: 60%;
-    margin: 80px auto;
-    padding: 40px;
+    width: 50%;
+    margin: 100px auto;
+    padding: 30px;
 
-    background: rgba(47, 48, 54, 0.08);
+    background: rgba(47, 48, 54, 0.253);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
@@ -120,6 +131,11 @@ span{
     border: 1px solid #0af;
 
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+
+    transition: 1s;
+}
+.sobre:hover{
+    width: 70%;
 }
 .linha-centro {
     position: fixed;
@@ -187,16 +203,35 @@ span{
 }
 .lista-projetos {
     display: flex;
-    gap: 24px;
+    gap: 28px;
 
     padding: 20px 40px;
+
     overflow-x: auto;
+    overflow-y: hidden;
 
     scroll-behavior: smooth;
 }
+.lista-projetos::-webkit-scrollbar {
+    height: 5px;
+}
+
+.lista-projetos::-webkit-scrollbar-track {
+    background:#093547b2 ;
+}
+
+.lista-projetos::-webkit-scrollbar-thumb {
+    background: #39c2ff;
+    border-radius: 10px;
+    cursor: grab;
+}
+.lista-projetos::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+    border-radius: 10px;
+}
 .card-projeto {
     min-width: 240px;
-    height: 160px;
+    height:360px;
 
     background: rgba(47, 48, 54, 0.12);
     backdrop-filter: blur(12px);
@@ -208,7 +243,13 @@ span{
     transition: transform 0.3s ease;
 }
 .card-projeto img{
-    height: 240px;
+    border-radius: 16px;
+    border: 1px solid #0af;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ESSENCIAL */
+    display: block;
+
 }
 .card-projeto:hover {
     transform: scale(1.1);
@@ -225,120 +266,4 @@ span{
   border-radius: 12px 12px 0px 0px;   
   box-sizing: border-box; 
  }
-/*RESPONSIVIDADE*/
-@media (max-width: 1024px) {
 
-    /* HEADER / NAV */
-    .navbar {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .menu a {
-        font-size: 16px;
-        padding: 6px 14px;
-    }
-
-    /* LOGO PRINCIPAL */
-    .logotipo {
-        height: 140px;
-    }
-
-    span {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    /* SEÇÃO SOBRE */
-    .sobre {
-        width: 85%;
-        padding: 30px;
-        gap: 30px;
-    }
-
-    .eu {
-        height: 280px;
-    }
-
-    .textosobre h1 {
-        font-size: 40px;
-    }
-}
-@media (max-width: 768px) {
-
-    /* NAVBAR EM COLUNA */
-    .navbar {
-        flex-direction: wrap;
-        align-items: center;
-        text-align: center;
-    }
-
-    .menu {
-        flex-direction: wrap;
-        gap: 10px;
-    }
-
-    /* HERO / LOGO */
-    .logo-container {
-        height: auto;
-        padding: 40px 0;
-    }
-
-    .logotipo {
-        height: 120px;
-    }
-    .logotipo:hover{
-        filter: invert(0.3) sepia(1) saturate(10) hue-rotate(130deg);
-        color: #39c2ff;
-        height: 140px;
-        transition: 0.3s ease-in-out;
-    }
-    span {
-        font-size: 18px;
-        margin: 0;
-    }
-
-    /* SOBRE: vira coluna */
-    .sobre {
-        flex-direction: column;
-        width: 90%;
-        margin: 40px auto;
-        padding: 25px;
-        text-align: center;
-    }
-
-    .eu {
-        height: auto;
-        width: 50%;
-    }
-
-    .textosobre h1 {
-        font-size: 32px;
-    }
-
-    .textosobre p {
-        font-size: 15px;
-    }
-
-    /* LINHA CENTRAL SOME NO MOBILE */
-    .linha-centro {
-        display: none;
-    }
-    .projetos h2 {
-        font-size: 32px;
-    }
-    .lista-projetos {
-        padding: 20px;
-    }
-}
-@media (min-width: 1600px) {
-    .sobre {
-        width: 55%;
-    }
-}

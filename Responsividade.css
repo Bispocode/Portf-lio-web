@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+@media (max-width: 480px) {
+
+  .navbar h1 {
+    font-size: 18px;
+  }
+
+  .logo-container h1 {
+    font-size: 56px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+
+  .textosobre h1 {
+    font-size: 24px;
+  }
+
+  .textosobre p {
+    font-size: 13px;
+  }
+
+  .card-projeto {
+    min-width: 180px;
+    height: 260px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* HERO */
+  .logo-container {
+    height: auto;
+    padding: 120px 20px 60px;
+  }
+
+  .logo-container h1 {
+    font-size: 72px;
+  }
+
+  .logo-container h1:hover {
+    font-size: 72px; /* remove efeito destrutivo no mobile */
+  }
+
+  span {
+    font-size: 20px;
+    margin: -10px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    width: 90%;
+    margin: 60px auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .eu {
+    height: 220px;
+  }
+
+  .textosobre h1 {
+    font-size: 30px;
+  }
+
+  .textosobre p {
+    font-size: 14px;
+  }
+
+  /* LINHA CENTRAL */
+  .linha-centro {
+    display: none; /* poluição visual no mobile */
+  }
+
+  /* PROJETOS */
+  .lista-projetos {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .card-projeto {
+    min-width: 200px;
+    height: 300px;
+  }
+}
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+  }
+
+  .menu a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .logo-container {
+    height: 400px;
+  }
+
+  .logo-container h1 {
+    font-size: 120px;
+  }
+
+  span {
+    font-size: 28px;
+    margin: -20px;
+  }
+
+  .sobre {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre:hover {
+    width: 85%;
+  }
+
+  .eu {
+    height: 280px;
+  }
+
+  .textosobre h1 {
+    font-size: 38px;
+  }
+}
