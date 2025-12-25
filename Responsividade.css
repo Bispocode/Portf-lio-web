@@ -105,11 +105,11 @@ html, body {
 
   /* HERO */
   .logo-container h1 {
-    font-size: 72px;
+    font-size: 75px;
   }
 
   .logo-container h1:hover {
-    font-size: 72px; /* desativa efeito destrutivo */
+    font-size: 50px; /* desativa efeito destrutivo */
   }
 
   span {
@@ -142,7 +142,7 @@ html, body {
 
   /* PROJETOS */
   .projetos {
-    width: 95%;
+    width: 85%;
     padding: 60px 0;
   }
 
