@@ -1,13 +1,34 @@
-const lista = document.querySelector('.lista-projetos');
+document.addEventListener("DOMContentLoaded", () => {
 
-if (lista) {
-    lista.addEventListener('wheel', (e) => {
-        if (lista.scrollWidth > lista.clientWidth) {
-            e.preventDefault();
-            lista.scrollLeft += e.deltaY;
+    const lista = document.querySelector(".lista-projetos");
+    const btnPrev = document.querySelector(".btn-prev");
+    const btnNext = document.querySelector(".btn-next");
+
+    let index = 0;
+    const visiveis = 3;
+    const gap = 24;
+
+    btnNext.addEventListener("click", () => {
+        const total = lista.children.length;
+        const limite = total - visiveis;
+
+        if (index < limite) {
+            index++;
+            mover();
         }
-    }, { passive: false });
-}
-console.log('JS carregado');
+    });
 
+    btnPrev.addEventListener("click", () => {
+        if (index > 0) {
+            index--;
+            mover();
+        }
+    });
 
+    function mover() {
+        const card = lista.children[0];
+        const largura = card.offsetWidth + gap;
+        lista.style.transform = `translateX(-${index * largura}px)`;
+    }
+
+});

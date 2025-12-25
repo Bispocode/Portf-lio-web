@@ -11,9 +11,8 @@
 </head>
 
 <body>
-  <script src="script.js"></script>
   <header class="navbar">
-    <h1>Luís Bispo | Produtor Multimídia</h1>
+    <a href="#logotipo"><h1>Luís Bispo | Produtor Multimídia</h1></a>
 
     <nav class="menu">
         <a href="#sobre-mim">Sobre-mim</a>
@@ -22,7 +21,7 @@
     </nav>
   </header>
 
-  <section id="#logotipo">
+  <section id="logotipo">
     <div class="logo-container">
       <h1>Luis Bispo</h1>
       <span>Produtor Multimídia</span>
@@ -43,17 +42,27 @@
       </div>
     </Div>
   </section>
-  <section id="projetos">
-    <div class="projetos">
-      <h2>Projetos</h2>
-      <div class="lista-projetos">
-          <a href="punk.html"><div class="card-projeto"><img src="capa punkd.png" alt="PUNKD"></div></a>
-          <a href=""></a><div class="card-projeto"></div></a>
-          <a href=""></a><div class="card-projeto"></div></a>
-          <a href=""></a><div class="card-projeto"></div></a>
-          <a href=""></a><div class="card-projeto"></div></a>
-      </div>
+  <section class="projetos">
+    <h2 class="titulo-projetos">PROJETOS</h2>
+    <div class="carrossel">
+        <div class="viewport"></div>
+        <div class="lista-projetos">
+            <a href="#" class="card-projeto"> <img src="capa punkd.png" alt="Projeto 1"> </a>
+            <a href="#" class="card-projeto"> <img src="plugados capa.png" alt="Projeto 2"> </a>
+            <a href="#" class="card-projeto"><img src="cartaz cartões postais.png" alt="Projeto 3"></a>
+            <a href="#" class="card-projeto"><img src="img/4.jpg" alt="Projeto 4"></a>
+            <a href="#" class="card-projeto"><img src="img/5.jpg" alt="Projeto 5"></a>
+            <a href="#" class="card-projeto"><img src="img/6.jpg" alt="Projeto 6"></a>
+        </div>
+
+        <div class="controles">
+          <button class="btn btn-prev">‹</button>
+          <button class="btn btn-next">›</button>
+        </div>
+
+
     </div>
+    <script src="script.js"></script>
   </section>
   <footer>
   </footer>
